@@ -1,0 +1,32 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  
+  
+  
+    tr:nth-child(even) {background-color: #f2f2f2;}
+  
+    
+    .navbar-brand mb-0 h1{
+      background-color: rgb(118, 141, 165);
+    }
+    .navbar navbar-light bg-light
+    {
+      background-color: rgb(111, 124, 138);
+    }
+    
+  
+  td.mat-cell {
+  
+   /* row border */
+   border-bottom: 1px dotted #000;
+  }
+  
+  
+  
