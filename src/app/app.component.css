@@ -28,5 +28,13 @@ table {
    border-bottom: 1px dotted #000;
   }
   
+
+  
+.positive {
+    color: rgb(93, 216, 93);
+}
+.negative {
+    color: rgb(245, 22, 89);
+}
   
   

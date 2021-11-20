@@ -1,7 +1,7 @@
 <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
     class="mat-elevation-z8">
 
-  <!-- Position Column -->
+  <!-- Fil.\/Kdnr. Column -->
   <ng-container matColumnDef="fil">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
       Fil.\/Kdnr.
@@ -9,6 +9,7 @@
     <td mat-cell *matCellDef="let element"> {{element.fil}} </td>
   </ng-container>
 
+  
   <!-- Name Column -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
@@ -17,7 +18,8 @@
     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
   </ng-container>
 
-  <!-- Weight Column -->
+
+  <!-- produkt Column -->
   <ng-container matColumnDef="produkt">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by produkt">
       Produkt
@@ -25,33 +27,47 @@
     <td mat-cell *matCellDef="let element"> {{element.produkt}} </td>
   </ng-container>
 
-  <!-- Symbol Column -->
+
+  <!-- bestand Column -->
   <ng-container matColumnDef="bestand">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by bestand">
       Bestand in EUR 
       <br>31.12.2013
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.bestand}} </td>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.bestand}} </td> -->
+    <td mat-cell *matCellDef="let element" [ngClass]="{
+      'positive' : element.bestand > 0,
+      'negative' : element.bestand < 0,
+     'zero':element.bestand == 0   }" > {{element.bestand}}</td>
   </ng-container>
 
 
+<!-- nettoneuakquistion Column -->
   <ng-container matColumnDef="nettoneuakquistion">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by nettoneuakquistion">
       Nettoneuakquistion in EUR
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.nettoneuakquistion}} </td>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.nettoneuakquistion}} </td> -->
+    <td mat-cell *matCellDef="let element" [ngClass]="{
+      'positive' : element.nettoneuakquistion > 0,
+      'negative' : element.nettoneuakquistion < 0,
+     'zero':element.nettoneuakquistion == 0   }" > {{element.nettoneuakquistion}}</td>
   </ng-container>
 
 
+<!-- aktueller Column -->
   <ng-container matColumnDef="aktueller">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by aktueller">
       Aktueller
       <br>Bestand in EUR
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.aktueller}} </td>
+    <!-- <td mat-cell *matCellDef="let element"> {{element.aktueller}} </td> -->
+    
+    <td mat-cell *matCellDef="let element" [ngClass]="{
+       'positive' : element.aktueller > 0,
+       'negative' : element.aktueller < 0,
+      'zero':element.aktueller == 0   }" > {{element.aktueller}}</td>
   </ng-container>
-
-
 
 
 
