@@ -43,15 +43,15 @@
 
 
 <!-- nettoneuakquistion Column -->
-  <ng-container matColumnDef="nettoneuakquistion">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by nettoneuakquistion">
+  <ng-container matColumnDef="nettoneuakquisition">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by nettoneuakquisition">
       Nettoneuakquistion in EUR
     </th>
     <!-- <td mat-cell *matCellDef="let element"> {{element.nettoneuakquistion}} </td> -->
     <td mat-cell *matCellDef="let element" [ngClass]="{
-      'positive' : element.nettoneuakquistion > 0,
-      'negative' : element.nettoneuakquistion < 0,
-     'zero':element.nettoneuakquistion == 0   }" > {{element.nettoneuakquistion}}</td>
+      'positive' : element.nettoneuakquisition > 0,
+      'negative' : element.nettoneuakquisition < 0,
+     'zero':element.nettoneuakquisition == 0   }" > {{element.nettoneuakquisition}}</td>
   </ng-container>
 
 

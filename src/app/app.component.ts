@@ -1,16 +1,27 @@
-import {LiveAnnouncer} from '@angular/cdk/a11y';
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import {MatSort, Sort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import studentData from './student.json';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { MatSort, Sort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import clientDetails from './vereport-ma-client.json';
 
-export interface Student {
- fil: string;
+
+export interface Client {
+  date: string;
+  user: string;
+  kpiName: string;
+  kpiData: Detail[];
+}
+
+export interface Detail {
+  customerId: String,
+  name1: String,
+  product: String,
+  fil: string;
   name: string;
   produkt: string;
-  bestand: string;
-  nettoneuakquistion: string;
-  aktueller:string;
+  bestand: number;
+  nettoneuakquisition: number;
+  aktueller: number;
 }
 
 
@@ -21,11 +32,16 @@ export interface Student {
 })
 export class AppComponent implements AfterViewInit {
   title = 'layout2';
-  datasource:Student[]=studentData;
-  displayedColumns: string[] = ['fil', 'name', 'produkt', 'bestand','nettoneuakquistion','aktueller'];
-  dataSource = new MatTableDataSource(studentData);
+  clients:Client=clientDetails;
 
-  constructor(private _liveAnnouncer: LiveAnnouncer) {}
+  details:Detail[]=clientDetails.kpiData;
+
+
+  datasource:Detail[]=this.details;
+  displayedColumns: string[] = ['fil', 'name', 'produkt', 'bestand', 'nettoneuakquisition', 'aktueller'];
+  dataSource = new MatTableDataSource(this.details);
+
+  constructor(private _liveAnnouncer: LiveAnnouncer) { }
 
   @ViewChild(MatSort)
   sort!: MatSort;

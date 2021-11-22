@@ -1,0 +1,40 @@
+{
+    "date": "08.11.2021",
+    "user": "Betty Beraterpb",
+    "kpiName": "OBB",
+    "kpiData": [
+      {
+        "customerId": "123/1234567",
+        "name1": "Mustermann, Max",
+        "product": "darin OBB",
+        "fil":" 600\/8203960",
+        "name":"Xxxxx, Xxxxxxxx",
+        "produkt":"Rest von Mandatsgeschäft",
+        "bestand":0,
+        "nettoneuakquisition":1863.28,
+        "aktueller":0
+      },
+        {
+        "customerId": "123/1234567",
+        "name1": "Mustermann, Max",
+        "product": "darin OBB",
+        "fil":" 600\/3555299",
+        "name":"-1, -1",
+        "produkt":"Rest von Mandatsgeschäft",
+        "bestand":31052.91,
+        "nettoneuakquisition":0,
+        "aktueller":30356.62
+      },
+      {
+      "customerId": "123/1234567",
+      "name1": "Mustermann, Max",
+      "product": "darin OBB",
+      "fil":" 600\/8940777",
+      "name":"-1, -1",
+      "produkt":"Rest von Mandatsgeschäft",
+      "bestand":25266.85,
+      "nettoneuakquisition":55501.64,
+      "aktueller":83835.96
+      }
+    ]
+  }
